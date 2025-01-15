@@ -7,7 +7,7 @@ st.title("Consulta Embedding Lambda")
 query = st.text_input("Introduce tu consulta:")
 
 if st.button("Enviar"):
-    url = "https://abc123.execute-api.us-east-1.amazonaws.com/prod/query-embedding"
+    url = "https://fzfi0gugng.execute-api.us-east-1.amazonaws.com/Prod/query"
     headers = {"Content-Type": "application/json"}
     payload = {"query": query}
     
