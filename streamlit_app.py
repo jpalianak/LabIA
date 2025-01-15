@@ -18,8 +18,8 @@ if st.button("Enviar"):
             data = response.json()
             
             # Mostrar la respuesta completa para diagnosticar
-            st.write("Respuesta completa de la API:")
-            st.json(data)  # Esto mostrará toda la respuesta JSON
+            #st.write("Respuesta completa de la API:")
+            #st.json(data)  # Esto mostrará toda la respuesta JSON
 
             # Mostrar respuesta de Pinecone
             #pinecone_response = data.get('pinecone', 'No se encontró respuesta de Pinecone')
