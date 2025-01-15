@@ -32,8 +32,8 @@ if st.button("Enviar"):
             st.success(openai_answer)
             
             # Mostrar fuentes
-            sources = data.get('sources', [])
-            st.write("Fuentes:", sources)
+            #sources = data.get('sources', [])
+            #st.write("Fuentes:", sources)
         else:
             st.error(f"Error: {response.status_code}")
             st.write(response.text)
