@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-st.title("Consulta Embedding Lambda")
+st.title("Consulta convenio Plastico")
 
 # Input del usuario
 query = st.text_input("Introduce tu consulta:")
