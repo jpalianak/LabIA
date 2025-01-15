@@ -28,7 +28,7 @@ if st.button("Enviar"):
 
             # Mostrar respuesta final de OpenAI
             openai_answer = data.get('answer', 'No se obtuvo respuesta de OpenAI')
-            st.subheader("Respuesta final de OpenAI")
+            st.subheader("Respuesta")
             st.success(openai_answer)
             
             # Mostrar fuentes
