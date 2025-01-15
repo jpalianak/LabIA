@@ -22,9 +22,9 @@ if st.button("Enviar"):
             st.json(data)  # Esto mostrará toda la respuesta JSON
 
             # Mostrar respuesta de Pinecone
-            pinecone_response = data.get('pinecone', 'No se encontró respuesta de Pinecone')
-            st.subheader("Respuesta de Pinecone")
-            st.write(pinecone_response)
+            #pinecone_response = data.get('pinecone', 'No se encontró respuesta de Pinecone')
+            #st.subheader("Respuesta de Pinecone")
+            #st.write(pinecone_response)
 
             # Mostrar respuesta final de OpenAI
             openai_answer = data.get('answer', 'No se obtuvo respuesta de OpenAI')
