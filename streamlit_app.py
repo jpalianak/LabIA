@@ -13,6 +13,26 @@ a:hover,  a:active {color: red;background-color: transparent;text-decoration: un
 """
 st.markdown(footer,unsafe_allow_html=True)
 
+# Agregar el logo con CSS
+st.markdown(
+    """
+    <style>
+    [data-testid="stSidebar"] {
+        padding-top: 0;
+    }
+    .logo-container {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        width: 150px;
+    }
+    </style>
+    <div class="logo-container">
+        <img src="https://github.com/jpalianak/LabIA/edit/main/airbiz.png" alt="Logo" width="150">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title("Consulta convenio Plastico")
 
