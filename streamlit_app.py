@@ -45,13 +45,13 @@ with st.sidebar:
     # Agregar el logo en la barra lateral
     st.image(
         "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
-        width=200
+        width=150
     )
     
     # Lista desplegable para seleccionar documentos
     doc_option = st.selectbox(
-        "Selecciona el documento a consultar:",
-        ["Documento 1", "Documento 2", "Documento 3", "Otro"]
+        "Selecciona el convenio a consultar:",
+        ["ATE", "UOM", "CTERA", "UOCRA"]
     )
 
     # Mostrar información basada en la selección
