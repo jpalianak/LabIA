@@ -28,7 +28,7 @@ st.markdown(
     }
     </style>
     <div class="logo-container">
-        <img src="https://https://github.com/jpalianak/LabIA/blob/main/airbiz.png" alt="Logo" width="150">
+        <img src="https://github.com/jpalianak/LabIA/blob/main/airbiz.png" alt="Logo" width="150">
     </div>
     """,
     unsafe_allow_html=True
