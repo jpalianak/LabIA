@@ -5,18 +5,21 @@ import requests
 st.markdown(
     """
     <style>
-    /* Espacio superior para evitar que el logo se solape */
+    /* Ajustar el espacio del contenido principal para dejar margen suficiente al logo */
     .main {
-        padding-top: 80px; /* Ajustar según sea necesario */
+        padding-top: 120px; /* Incrementar para evitar el corte del logo */
     }
 
     /* Contenedor del logo */
     .logo-container {
         position: fixed;
-        top: 10px; /* Asegura que el logo no quede cortado */
+        top: 0; /* Cambiar a 0 para asegurar la parte superior completa */
         left: 10px;
         width: 150px;
         z-index: 1000;
+        background-color: white; /* Fondo blanco para asegurarse de que se vea bien */
+        padding: 10px; /* Margen interno para evitar que quede cortado */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para destacar */
     }
 
     /* Estilo del footer */
@@ -28,10 +31,10 @@ st.markdown(
         background-color: white;
         color: black;
         text-align: center;
-        padding: 5px 0; /* Reducir espacio vertical */
+        padding: 5px 0;
         font-size: 14px;
         border-top: 1px solid #ddd;
-        line-height: 1.5; /* Controlar el espacio entre líneas */
+        line-height: 1.5;
     }
 
     /* Estilo de los enlaces */
