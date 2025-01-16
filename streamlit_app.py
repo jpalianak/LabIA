@@ -30,6 +30,13 @@ st.markdown(
         background-color: transparent;
         text-decoration: underline;
     }
+
+    /* Centrar el contenido en la barra lateral */
+    .sidebar .sidebar-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     </style>
 
     <div class="footer">
@@ -42,24 +49,20 @@ st.markdown(
 
 # Barra lateral
 with st.sidebar:
-    # Agregar el logo en la barra lateral
+    # Agregar el logo centrado en la barra lateral
     st.image(
         "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
         width=150
     )
-
-    # Agregar espacio antes del selectbox
-    st.markdown("<br>", unsafe_allow_html=True)
     
-    # Lista desplegable para seleccionar documentos
+    # Agregar espacio antes del selectbox
+    st.markdown("<br><br>", unsafe_allow_html=True)
+    
+    # Lista desplegable para seleccionar convenios
     doc_option = st.selectbox(
         "Selecciona el convenio a consultar:",
         ["ATE", "UOM", "CTERA", "UOCRA"]
     )
-
-    # Mostrar información basada en la selección
-    if doc_option == "Otro":
-        custom_doc = st.text_input("Especifica el documento:")
 
 st.title("Consulta convenio Plástico")
 
@@ -87,6 +90,7 @@ if st.button("Enviar"):
     except Exception as e:
         st.error("No se pudo conectar con el servidor.")
         st.write(str(e))
+
 
 
 
