@@ -1,19 +1,7 @@
 import streamlit as st
 import requests
 
-# Footer
-footer="""<style>
-a:link , a:visited{color: blue;background-color: transparent;text-decoration: underline;}
-a:hover,  a:active {color: red;background-color: transparent;text-decoration: underline;}
-.footer {position: fixed;left: 0;bottom: 0;width: 100%;background-color: white;color: black;text-align: center;}
-</style>
-<div class="footer">
-<p>Developed by AIRBIZ <a style='display: block; text-align: center;' href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
-</div>
-"""
-st.markdown(footer,unsafe_allow_html=True)
-
-# Agregar el logo con CSS
+# Agregar el logo y el footer con CSS
 st.markdown(
     """
     <style>
@@ -26,9 +14,31 @@ st.markdown(
         left: 10px;
         width: 150px;
     }
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        color: black;
+        text-align: center;
+    }
+    a:link, a:visited {
+        color: blue;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:hover, a:active {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
     </style>
     <div class="logo-container">
-        <img src="https://github.com/jpalianak/LabIA/blob/main/airbiz.png" alt="Logo" width="150">
+        <img src="https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png" alt="Logo" width="150">
+    </div>
+    <div class="footer">
+        <p>Developed by AIRBIZ <a href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
     </div>
     """,
     unsafe_allow_html=True
