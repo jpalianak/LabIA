@@ -40,8 +40,7 @@ with st.sidebar:
     # Agregar el logo centrado
     st.image(
         "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
-        width=150,
-        use_column_width=False
+        width=150
     )
     
     # Agregar espacio antes del selectbox
@@ -79,6 +78,7 @@ if st.button("Enviar"):
     except Exception as e:
         st.error("No se pudo conectar con el servidor.")
         st.write(str(e))
+
 
 
 
