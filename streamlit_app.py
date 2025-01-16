@@ -1,6 +1,19 @@
 import streamlit as st
 import requests
 
+# Footer
+footer="""<style>
+a:link , a:visited{color: blue;background-color: transparent;text-decoration: underline;}
+a:hover,  a:active {color: red;background-color: transparent;text-decoration: underline;}
+.footer {position: fixed;left: 0;bottom: 0;width: 100%;background-color: white;color: black;text-align: center;}
+</style>
+<div class="footer">
+<p>Developed by AIRBIZ <a style='display: block; text-align: center;' href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
+
+
 st.title("Consulta convenio Plastico")
 
 # Input del usuario
@@ -41,7 +54,4 @@ if st.button("Enviar"):
         st.error("No se pudo conectar con el servidor.")
         st.write(str(e))
 
-# Footer
-st.markdown("---")
-st.markdown("**Desarrollado por: [Tu Nombre o Empresa](https://github.com/jpalianak)** - Proyecto de Monitoreo de Consumo de Corriente con IA y AWS.")
 
