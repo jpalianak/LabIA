@@ -5,15 +5,15 @@ import requests
 st.markdown(
     """
     <style>
-    /* Espacio para el contenido de Streamlit */
+    /* Espacio superior para evitar que el logo se solape */
     .main {
-        padding-top: 120px;
+        padding-top: 80px; /* Ajustar según sea necesario */
     }
 
     /* Contenedor del logo */
     .logo-container {
         position: fixed;
-        top: 10px;
+        top: 10px; /* Asegura que el logo no quede cortado */
         left: 10px;
         width: 150px;
         z-index: 1000;
@@ -28,9 +28,10 @@ st.markdown(
         background-color: white;
         color: black;
         text-align: center;
-        padding: 10px 0;
+        padding: 5px 0; /* Reducir espacio vertical */
         font-size: 14px;
         border-top: 1px solid #ddd;
+        line-height: 1.5; /* Controlar el espacio entre líneas */
     }
 
     /* Estilo de los enlaces */
@@ -51,8 +52,8 @@ st.markdown(
     </div>
 
     <div class="footer">
-        <p>Developed by AIRBIZ</p>
-        <p><a href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
+        <p>Developed by AIRBIZ<br>
+        <a href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
     </div>
     """,
     unsafe_allow_html=True
