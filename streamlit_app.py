@@ -1,28 +1,10 @@
 import streamlit as st
 import requests
 
-# Agregar el logo y el footer con CSS
+# Agregar estilos personalizados para la barra lateral
 st.markdown(
     """
     <style>
-    /* Ajustar el espacio del contenido principal para dejar margen suficiente al logo */
-    .main {
-        padding-top: 120px; /* Incrementar para evitar el corte del logo */
-    }
-
-    /* Contenedor del logo */
-    .logo-container {
-        position: fixed;
-        top: 1; /* Cambiar a 0 para asegurar la parte superior completa */
-        left: 20px;
-        width: 150px;
-        z-index: 1000;
-        background-color: white; /* Fondo blanco para asegurarse de que se vea bien */
-        padding: 10px; /* Margen interno para evitar que quede cortado */
-        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Sombra ligera para destacar */
-    }
-
-    /* Estilo del footer */
     .footer {
         position: fixed;
         left: 0;
@@ -50,10 +32,6 @@ st.markdown(
     }
     </style>
 
-    <div class="logo-container">
-        <img src="https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png" alt="Logo" width="150">
-    </div>
-
     <div class="footer">
         <p>Developed by AIRBIZ<br>
         <a href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
@@ -62,7 +40,25 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("Consulta convenio Plastico")
+# Barra lateral
+with st.sidebar:
+    # Agregar el logo en la barra lateral
+    st.image(
+        "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
+        width=200
+    )
+    
+    # Lista desplegable para seleccionar documentos
+    doc_option = st.selectbox(
+        "Selecciona el documento a consultar:",
+        ["Documento 1", "Documento 2", "Documento 3", "Otro"]
+    )
+
+    # Mostrar información basada en la selección
+    if doc_option == "Otro":
+        custom_doc = st.text_input("Especifica el documento:")
+
+st.title("Consulta convenio Plástico")
 
 # Input del usuario
 query = st.text_input("Introduce tu consulta:")
@@ -77,29 +73,17 @@ if st.button("Enviar"):
         
         if response.status_code == 200:
             data = response.json()
-            
-            # Mostrar la respuesta completa para diagnosticar
-            #st.write("Respuesta completa de la API:")
-            #st.json(data)  # Esto mostrará toda la respuesta JSON
-
-            # Mostrar respuesta de Pinecone
-            #pinecone_response = data.get('pinecone', 'No se encontró respuesta de Pinecone')
-            #st.subheader("Respuesta de Pinecone")
-            #st.write(pinecone_response)
 
             # Mostrar respuesta final de OpenAI
             openai_answer = data.get('answer', 'No se obtuvo respuesta de OpenAI')
             st.subheader("Respuesta")
             st.success(openai_answer)
-            
-            # Mostrar fuentes
-            #sources = data.get('sources', [])
-            #st.write("Fuentes:", sources)
         else:
             st.error(f"Error: {response.status_code}")
             st.write(response.text)
     except Exception as e:
         st.error("No se pudo conectar con el servidor.")
         st.write(str(e))
+
 
 
