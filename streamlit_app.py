@@ -53,6 +53,7 @@ with st.sidebar:
     st.image(
         "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
         width=150
+        use_column_width=False
     )
     
     # Agregar espacio antes del selectbox
