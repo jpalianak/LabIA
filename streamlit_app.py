@@ -19,7 +19,7 @@ st.markdown(
         z-index: 1000;
         background-color: white; /* Fondo blanco para asegurarse de que se vea bien */
         padding: 10px; /* Margen interno para evitar que quede cortado */
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera para destacar */
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0); /* Sombra ligera para destacar */
     }
 
     /* Estilo del footer */
