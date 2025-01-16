@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-# Agregar estilos personalizados para la barra lateral
+# Estilo personalizado con CSS
 st.markdown(
     """
     <style>
@@ -17,18 +17,6 @@ st.markdown(
         font-size: 14px;
         border-top: 1px solid #ddd;
         line-height: 1.5;
-    }
-
-    /* Estilo de los enlaces */
-    a:link, a:visited {
-        color: blue;
-        background-color: transparent;
-        text-decoration: underline;
-    }
-    a:hover, a:active {
-        color: red;
-        background-color: transparent;
-        text-decoration: underline;
     }
 
     /* Centrar el contenido en la barra lateral */
@@ -49,10 +37,10 @@ st.markdown(
 
 # Barra lateral
 with st.sidebar:
-    # Agregar el logo centrado en la barra lateral
+    # Agregar el logo centrado
     st.image(
         "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
-        width=150
+        width=150,
         use_column_width=False
     )
     
