@@ -13,7 +13,7 @@ st.markdown(
     /* Contenedor del logo */
     .logo-container {
         position: fixed;
-        top: 50; /* Cambiar a 0 para asegurar la parte superior completa */
+        top: 30; /* Cambiar a 0 para asegurar la parte superior completa */
         left: 10px;
         width: 150px;
         z-index: 1000;
