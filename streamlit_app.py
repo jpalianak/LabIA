@@ -14,7 +14,7 @@ st.markdown(
     .logo-container {
         position: fixed;
         top: 1; /* Cambiar a 0 para asegurar la parte superior completa */
-        left: 10px;
+        left: 20px;
         width: 150px;
         z-index: 1000;
         background-color: white; /* Fondo blanco para asegurarse de que se vea bien */
