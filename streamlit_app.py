@@ -41,4 +41,7 @@ if st.button("Enviar"):
         st.error("No se pudo conectar con el servidor.")
         st.write(str(e))
 
+# Footer
+st.markdown("---")
+st.markdown("**Desarrollado por: [Tu Nombre o Empresa](https://github.com/jpalianak)** - Proyecto de Monitoreo de Consumo de Corriente con IA y AWS.")
 
