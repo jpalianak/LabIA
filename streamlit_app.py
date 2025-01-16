@@ -47,6 +47,9 @@ with st.sidebar:
         "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
         width=150
     )
+
+    # Agregar espacio antes del selectbox
+    st.markdown("<br><br><br>", unsafe_allow_html=True)
     
     # Lista desplegable para seleccionar documentos
     doc_option = st.selectbox(
