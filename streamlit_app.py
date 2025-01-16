@@ -49,7 +49,7 @@ with st.sidebar:
     )
 
     # Agregar espacio antes del selectbox
-    st.markdown("<br><br><br>", unsafe_allow_html=True)
+    st.markdown("<br><br>", unsafe_allow_html=True)
     
     # Lista desplegable para seleccionar documentos
     doc_option = st.selectbox(
