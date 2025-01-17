@@ -38,7 +38,7 @@ with st.sidebar:
         ["ATE", "UOM", "CTERA", "UOCRA"]
     )
 
-st.title("Consulta convenio Plástico")
+st.title("Consulta convenio")
 
 # Input del usuario
 query = st.text_input("Introduce tu consulta:")
