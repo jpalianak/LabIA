@@ -82,7 +82,11 @@ if st.button("Enviar"):
             st.subheader("Respuesta")
             st.success(openai_answer)
         else:
-            st.error(f"Error: {response.status_cod
+            st.error(f"Error: {response.status_code}")
+            st.write(response.text)
+    except Exception as e:
+        st.error("No se pudo conectar con el servidor.")
+        st.write(str(e))
 
 
 
