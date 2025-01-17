@@ -15,7 +15,7 @@ st.markdown(
 
     /* Ajustar el estilo de la imagen del logo */
     .sidebar .logo-container img {
-        width: 150px;
+        width: 100px;
         height: auto;
         display: block;
     }
