@@ -52,7 +52,7 @@ st.markdown(
 # Barra lateral
 with st.sidebar:
     # Contenedor del logo
-    st.image("https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png", width=150)
+    #st.image("https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png", width=150)
     
     # Espaciado adicional entre logo y selectbox
     st.markdown("<br>", unsafe_allow_html=True)
