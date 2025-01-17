@@ -4,56 +4,40 @@ import streamlit as st
 st.markdown(
     """
     <style>
-    .footer {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background-color: white;
-        color: black;
-        text-align: center;
-        padding: 5px 0;
-        font-size: 14px;
-        border-top: 1px solid #ddd;
-        line-height: 1.5;
-    }
-
-    /* Centrar contenido de la barra lateral */
+    /* Estilo para centrar el contenido de la barra lateral */
     .sidebar .sidebar-content {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start; /* Ajustar para espacio extra arriba */
+        padding-top: 20px; /* Espacio adicional arriba */
     }
 
-    /* Centrar específicamente la imagen */
+    /* Ajustar el estilo de la imagen del logo */
     .sidebar .logo-container img {
+        width: 150px;
+        height: auto;
         display: block;
-        margin: 0 auto;
     }
     </style>
-
-    <div class="footer">
-        <p>Desarrollado por AIRBIZ<br>
-        <a href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
-    </div>
     """,
     unsafe_allow_html=True
 )
 
 # Barra lateral
 with st.sidebar:
-    # Agregar el logo centrado
+    # Contenedor del logo
     st.markdown(
         """
         <div class="logo-container">
-            <img src="https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png" alt="Logo" width="150">
+            <img src="https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png" alt="Logo">
         </div>
         """,
         unsafe_allow_html=True
     )
     
-    # Espaciado entre el logo y el selectbox
-    st.markdown("<br><br>", unsafe_allow_html=True)
+    # Espaciado adicional entre logo y selectbox
+    st.markdown("<br>", unsafe_allow_html=True)
     
     # Lista desplegable para seleccionar convenios
     doc_option = st.selectbox(
