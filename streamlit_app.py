@@ -1,4 +1,5 @@
 import streamlit as st
+import requests
 
 # Estilos personalizados con CSS
 st.markdown(
