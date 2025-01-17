@@ -1,25 +1,50 @@
 import streamlit as st
 
-# Estilo personalizado con CSS
+# Estilos personalizados con CSS
 st.markdown(
     """
     <style>
-    /* Estilo para centrar el contenido de la barra lateral */
+    /* Centrar el contenido de la barra lateral */
     .sidebar .sidebar-content {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-start; /* Ajustar para espacio extra arriba */
-        padding-top: 20px; /* Espacio adicional arriba */
+        align-items: center; /* Centrar elementos */
+        justify-content: flex-start;
+        padding-top: 20px; /* Espaciado superior */
     }
 
-    /* Ajustar el estilo de la imagen del logo */
-    .sidebar .logo-container img {
-        width: 100px;
-        height: auto;
-        display: block;
+    /* Estilo del footer */
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        color: black;
+        text-align: center;
+        padding: 5px 0;
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+    }
+
+    /* Enlaces del footer */
+    a:link, a:visited {
+        color: blue;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    a:hover, a:active {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
     }
     </style>
+
+    <!-- Footer HTML -->
+    <div class="footer">
+        <p>Developed by AIRBIZ<br>
+        <a href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
+    </div>
     """,
     unsafe_allow_html=True
 )
