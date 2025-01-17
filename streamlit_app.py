@@ -1,5 +1,4 @@
 import streamlit as st
-import requests
 
 # Estilo personalizado con CSS
 st.markdown(
@@ -19,16 +18,22 @@ st.markdown(
         line-height: 1.5;
     }
 
-    /* Centrar el contenido en la barra lateral */
+    /* Centrar contenido de la barra lateral */
     .sidebar .sidebar-content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
+
+    /* Centrar específicamente la imagen */
+    .sidebar .logo-container img {
+        display: block;
+        margin: 0 auto;
+    }
     </style>
 
     <div class="footer">
-        <p>Developed by AIRBIZ<br>
+        <p>Desarrollado por AIRBIZ<br>
         <a href="https://www.airbiz.com.ar/" target="_blank">www.airbiz.com.ar</a></p>
     </div>
     """,
@@ -38,12 +43,16 @@ st.markdown(
 # Barra lateral
 with st.sidebar:
     # Agregar el logo centrado
-    st.image(
-        "https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png",
-        width=150
+    st.markdown(
+        """
+        <div class="logo-container">
+            <img src="https://raw.githubusercontent.com/jpalianak/LabIA/main/airbiz.png" alt="Logo" width="150">
+        </div>
+        """,
+        unsafe_allow_html=True
     )
     
-    # Agregar espacio antes del selectbox
+    # Espaciado entre el logo y el selectbox
     st.markdown("<br><br>", unsafe_allow_html=True)
     
     # Lista desplegable para seleccionar convenios
@@ -73,11 +82,8 @@ if st.button("Enviar"):
             st.subheader("Respuesta")
             st.success(openai_answer)
         else:
-            st.error(f"Error: {response.status_code}")
-            st.write(response.text)
-    except Exception as e:
-        st.error("No se pudo conectar con el servidor.")
-        st.write(str(e))
+            st.error(f"Error: {response.status_cod
+
 
 
 
